@@ -1,0 +1,140 @@
+* {
+    box-sizing : border-box ;
+    margin: 0 ;
+    padding: 0 ; 
+    font-size: 1.4rem;
+    font-family: system-ui, sans-serif;
+    font-weight: 500;
+}
+  
+body {
+    margin-top: 50px;
+    background: rgb(194, 187, 187) ;
+}
+
+.flex-container {
+    display:flex ;
+    justify-content:center ;
+    margin: 30px ;
+}
+
+.form-container {
+    display:flex ; 
+    padding: 12px 20px ;
+    background: white ;
+    width : 600px ;  
+    /*height : 80px ;*/
+    box-shadow: 12px 20px 1px 1px #1e3d3e;
+}
+
+#input-container {
+    display: flex ;
+    padding: 10px ; 
+    background: #f8f8f8 ;
+    flex: 1;
+    /*border-radius: 10px; */
+}
+
+#add-input {
+    flex: 1 ;
+    border-style: none ;
+    background: #f8f8f8 ;
+    padding: 5px;
+    color: #1e3d3e;
+}
+
+#add-button {
+    padding: 8px ;
+    background: #f5577c ; 
+    border: none ; 
+    border-radius: 5px ;
+    color: white;
+}
+
+#add-button:hover {
+    background: #ff6f91 ; 
+    cursor: pointer;
+}
+
+ul {
+    flex: 1 ;
+    background: white ;
+}
+
+li {
+    display:flex ;
+    list-style-type: none ;
+    border-bottom: solid 2px #d5d5d5 ;
+    padding: 10px ; 
+}
+#delete-button-container {
+    display: flex ;
+    justify-content: center; 
+    border: none;
+    padding: 20px;
+}
+
+#delete-button {
+    padding: 8px;
+    background: #24b0bc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#delete-button:hover {
+    background: #43acb6;
+    cursor: pointer;
+}
+
+li label { 
+    cursor: pointer ;
+    display: flex ;
+    align-items: center;
+    color: #24b0bc;
+}
+
+li input[type='checkbox'] {
+    cursor: pointer ; 
+    opacity: 0; 
+    position: absolute ;
+}
+
+li label::before {
+    content: '' ;
+    width: 1em ;
+    height: 1em ;
+    border-radius: .35em ;
+    border: .15em solid #24b0bc;
+    margin-right: .5em ;
+    align-items: center;
+    justify-content: center;
+}
+
+li label:hover::before,
+li input[type='checkbox']:hover + label::before {
+    background: rgb(173, 220, 238) ;
+}  
+/*
+li input[type='checkbox']:focus + label:before {
+ 
+    outline: max(2px, .10em) solid #f5577c;
+    outline-offset: max(2px, 0.05em);
+
+}*/
+li input[type='checkbox']:checked + label::before {
+
+    content: '' ;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%2324b0bc' class='bi bi-check' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'/%3E%3C/svg%3E");
+    border: .15em solid white;
+}
+
+.crossed {
+    text-decoration: line-through;
+    text-decoration-color: #24b0bc;
+    color: #d5d5d5;
+}
+
+input[type='text']:focus {
+    outline: none;
+}
